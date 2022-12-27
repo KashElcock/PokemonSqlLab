@@ -1,0 +1,41 @@
+mysql> describe types;
++-------+------+------+-----+---------+----------------+
+| Field | Type | Null | Key | Default | Extra          |
++-------+------+------+-----+---------+----------------+
+| id    | int  | NO   | PRI | NULL    | auto_increment |
+| name  | text | NO   |     | NULL    |                |
++-------+------+------+-----+---------+----------------+
+
+mysql> describe trainers;
++-------------+------+------+-----+---------+-------+
+| Field       | Type | Null | Key | Default | Extra |
++-------------+------+------+-----+---------+-------+
+| trainerID   | int  | NO   | PRI | NULL    |       |
+| trainername | text | YES  |     | NULL    |       |
++-------------+------+------+-----+---------+-------+
+
+mysql> describe pokemons;
++----------------+------+------+-----+---------+----------------+
+| Field          | Type | Null | Key | Default | Extra          |
++----------------+------+------+-----+---------+----------------+
+| id             | int  | NO   | PRI | NULL    | auto_increment |
+| name           | text | NO   |     | NULL    |                |
+| primary_type   | int  | NO   |     | NULL    |                |
+| secondary_type | int  | YES  |     | NULL    |                |
++----------------+------+------+-----+---------+----------------+
+
+mysql> describe pokemon_trainer;
++------------+------+------+-----+---------+-------+
+| Field      | Type | Null | Key | Default | Extra |
++------------+------+------+-----+---------+-------+
+| trainerID  | int  | YES  |     | NULL    |       |
+| pokelevel  | int  | YES  |     | NULL    |       |
+| hp         | int  | YES  |     | NULL    |       |
+| maxhp      | int  | YES  |     | NULL    |       |
+| attack     | int  | YES  |     | NULL    |       |
+| defense    | int  | YES  |     | NULL    |       |
+| spatk      | int  | YES  |     | NULL    |       |
+| spdef      | int  | YES  |     | NULL    |       |
+| speed      | int  | YES  |     | NULL    |       |
+| pokemon_id | int  | YES  |     | NULL    |       |
++------------+------+------+-----+---------+-------+
